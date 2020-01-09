@@ -7,7 +7,7 @@ import Reports from './components/reports'
 import Users from './components/users'
 import Templates from './components/templates'
 import NewProgram from './components/newprogram'
-import Nav from './components/nav'
+import CustomNav from './components/custom_nav'
 import ProgramBasic from './components/program_basic';
 import ProgramRequestGeneration from './components/program_requestGeneration';
 import ProgramExpertise from './components/program_expertise';
@@ -27,7 +27,7 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <Nav />
+          <CustomNav />
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/programs" component={Programs} />
           <Route path="/experts" component={Experts} />
