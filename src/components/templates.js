@@ -14,11 +14,11 @@ export default class Templates extends Component {
     return (
       <div>
 				<Container className="bg-light">
-		    	<div className="row pt-4">
-		        	<div className="col-md-12 mb-4">
-		        		<h2 className="mb-3">Templates</h2>
-		        	</div>
-		      	</div>
+				<Row className="pt-4">
+							<Col className="mb-4">
+								<h2 className="mb-3">Templates</h2>
+							</Col>
+						</Row>
 		    	<Row>
 					<Col>
 						<Tabs defaultActiveKey="request" id="templates-tabs">

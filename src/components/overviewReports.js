@@ -6,14 +6,14 @@ import Col from "react-bootstrap/Col";
 import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table';
 
-export default class RequestGeneration extends Component {
+export default class OverviewReports extends Component {
   render() {
     return (
       <div>
       	<Container className="bg-white">
 						<Row className="pt-4">
 							<Col className="mb-4">
-								<h3 className="mb-3">Request Generation  Templates</h3>
+								<h3 className="mb-3">Overview Reports</h3>
 							</Col>
 						</Row>
             <Row>
@@ -37,30 +37,30 @@ export default class RequestGeneration extends Component {
                 <Table class="bg-white">
                 <thead>
                     <tr>
-                      <th scope="col">Template</th>
-                      <th scope="col">UI</th>
+                      <th scope="col">Program</th>
+                      <th scope="col">Expert</th>
                       <th scope="col">ID</th>
                       <th scope="col">Status</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td><a href="#">Queue Manager Basic</a> <span class="badge badge-primary">33</span></td>
-                      <td>Queue Manager</td>
-                      <td>global_QM_basic</td>
-                      <td>Active</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
                     </tr>
                     <tr>
-                      <td><a href="#">On-Demand Basic</a> <span class="badge badge-primary">11</span></td>
-                      <td>On-Demand</td>
-                      <td>global_OD_basic</td>
-                      <td>Active</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
                     </tr>
                     <tr>
-                      <td><a href="#">Direct Connection Basic</a> <span class="badge badge-primary">2</span></td>
-                      <td>Direct</td>
-                      <td>global_DC_basic</td>
-                      <td>Active</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
                     </tr>
                   </tbody>
                 </Table>

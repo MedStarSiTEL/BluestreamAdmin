@@ -6,14 +6,14 @@ import Col from "react-bootstrap/Col";
 import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table';
 
-export default class RequestGeneration extends Component {
+export default class OverviewReports extends Component {
   render() {
     return (
       <div>
       	<Container className="bg-white">
 						<Row className="pt-4">
 							<Col className="mb-4">
-								<h3 className="mb-3">Request Generation  Templates</h3>
+								<h3 className="mb-3">Overview Reports</h3>
 							</Col>
 						</Row>
             <Row>
@@ -37,8 +37,8 @@ export default class RequestGeneration extends Component {
                 <Table class="bg-white">
                 <thead>
                     <tr>
-                      <th scope="col">Template</th>
-                      <th scope="col">UI</th>
+                      <th scope="col">Program</th>
+                      <th scope="col">Expert</th>
                       <th scope="col">ID</th>
                       <th scope="col">Status</th>
                     </tr>

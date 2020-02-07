@@ -6,7 +6,7 @@ export default class CustomNav extends Component {
   render() {
     return (
       <div>
-        <Navbar bg="white" expand="lg">
+         <Navbar bg="light" expand="lg">
           <Navbar.Brand href="/dashboard" style={{ width: "100px" }}>
             <img src="msh_logo.png" height="90%" width="90%" />
           </Navbar.Brand>
