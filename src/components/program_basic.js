@@ -4,6 +4,10 @@ import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import InputGroup from "react-bootstrap/InputGroup";
+import CardDeck from "react-bootstrap/CardDeck";
+import Card from "react-bootstrap/Card";
+import Badge from "react-bootstrap/Badge";
+import Dropdown from "react-bootstrap/Dropdown";
 
 export default class ProgramBasic extends Component {
   render() {
@@ -98,6 +102,183 @@ export default class ProgramBasic extends Component {
                 />
               </Form.Group>
             </Form>
+          </Col>
+        </Row>
+        <Row className="mb-5">
+          <Col>
+            {/* this is a component - subsection header */}
+             <h4>Request Generation Template</h4>
+            <p className="text-secondary">Select a Request Generation Template</p>
+            <Row><Col md={3}>
+              <Form.Group controlId="searchRGT">
+                <Form.Control type="input" />
+              </Form.Group>
+              </Col>
+              <Col md={6} className="mb-3">
+              <Dropdown  className="ml-1" style={{display: 'inline'}}>
+              <Dropdown.Toggle variant="outline-dark" id="dropdown-type-availability">
+                All Types
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item href="#/action-1">Base</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Custom</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+            <Dropdown  className="ml-1" style={{display: 'inline'}}>
+              <Dropdown.Toggle variant="outline-dark" id="dropdown-type-availability">
+                All UI
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item href="#/action-1">Queue Manager</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">On Demand</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Direct link</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+              </Col>
+              </Row>
+            <Row>
+              <Col>
+            {/* this is a component - subsection content */}
+            <CardDeck  className="mt-3">
+              <Card>
+								<Card.Body>
+                  <Card.Title>Prompt Care <Badge variant="secondary float-right">List</Badge></Card.Title>
+                  <Card.Text>
+                    Used for Prompt Care expert consult programs  
+                  </Card.Text>
+									<Button variant="primary">Use</Button>
+									<Button variant="link ml-1">Preview</Button>
+                </Card.Body>
+              </Card>
+              <Card>
+                <Card.Body>
+                  <Card.Title>Sports Medicine <Badge variant="secondary float-right">Ad hoc</Badge></Card.Title>
+                  <Card.Text>
+                    This card has supporting text below as a natural lead-in to
+                    additional content.{" "}
+                  </Card.Text>
+									<Button variant="primary">Use</Button>
+									<Button variant="link ml-1">Preview</Button>
+                </Card.Body>
+              </Card>
+              <Card>
+                <Card.Body>
+                  <Card.Title>Maternal Fetal Medicine <Badge variant="secondary float-right">Link</Badge></Card.Title>
+                  <Card.Text>
+                    This is a wider card with supporting text below as a natural
+                  </Card.Text>
+									<Button variant="primary">Use</Button>
+									<Button variant="link ml-1">Preview</Button>
+                </Card.Body>
+              </Card>
+              </CardDeck>
+              <CardDeck className="mt-3">
+              <Card>
+                <Card.Body>
+                  <Card.Title>Queue Manager Base<Badge variant="secondary float-right">List</Badge></Card.Title>
+                  <Card.Text>
+                    This is a wider card with supporting text below as a natural
+                  </Card.Text>
+									<Button variant="primary">Use</Button>
+									<Button variant="link ml-1">Preview</Button>
+                </Card.Body>
+              </Card>
+              <Card>
+                <Card.Body>
+                  <Card.Title>On-Demand Base <Badge variant="secondary float-right">Ad hoc</Badge></Card.Title>
+                  <Card.Text>
+                    This is a wider card with supporting text below as a natural
+                  </Card.Text>
+									<Button variant="primary">Use</Button>
+									<Button variant="link ml-1">Preview</Button>
+                </Card.Body>
+              </Card>
+              <Card>
+                <Card.Body>
+                  <Card.Title>Direct Base <Badge variant="secondary float-right">Link</Badge></Card.Title>
+                  <Card.Text>
+                    This is a wider card with supporting text below as a natural
+                  </Card.Text>
+									<Button variant="primary">Use</Button>
+									<Button variant="link ml-1">Preview</Button>
+                </Card.Body>
+              </Card>
+            </CardDeck>
+            </Col>
+            </Row>
+          </Col>
+        </Row>
+        <Row className="mb-5">
+          <Col>
+            {/* this is a component - subsection header */}
+             <h4>Expert Template</h4>
+            <p className="text-secondary">Select a Remote Expert Template</p>
+            <Row><Col md={3}>
+              <Form.Group controlId="searchRGT">
+                <Form.Control type="input" />
+              </Form.Group>
+              </Col>
+              <Col md={6} className="mb-3">
+              <Dropdown  className="ml-1" style={{display: 'inline'}}>
+              <Dropdown.Toggle variant="outline-dark" id="dropdown-type-availability">
+                All Types
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item href="#/action-1">Base</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Custom</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+            <Dropdown  className="ml-1" style={{display: 'inline'}}>
+              <Dropdown.Toggle variant="outline-dark" id="dropdown-type-availability">
+                All UI
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item href="#/action-1">Queue Manager</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">On Demand</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Direct link</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+              </Col>
+              </Row>
+            <Row>
+              <Col>
+            {/* this is a component - subsection content */}
+            <CardDeck  className="mt-3">
+              <Card>
+								<Card.Body>
+                  <Card.Title>EM Bunker <Badge variant="secondary float-right">List</Badge></Card.Title>
+                  <Card.Text>
+                    Used for all EM bunker queue manager programs  
+                  </Card.Text>
+									<Button variant="primary">Use</Button>
+									<Button variant="link ml-1">Preview</Button>
+                </Card.Body>
+              </Card>
+              <Card>
+                <Card.Body>
+                  <Card.Title>Sports Medicine Providers<Badge variant="secondary float-right">Ad hoc</Badge></Card.Title>
+                  <Card.Text>
+                    This card has supporting text below as a natural lead-in to
+                    additional content.{" "}
+                  </Card.Text>
+									<Button variant="primary">Use</Button>
+									<Button variant="link ml-1">Preview</Button>
+                </Card.Body>
+              </Card>
+              <Card>
+                <Card.Body>
+                  <Card.Title>Maternal Fetal Medicine Providers<Badge variant="secondary float-right">Link</Badge></Card.Title>
+                  <Card.Text>
+                    This is a wider card with supporting text below as a natural
+                  </Card.Text>
+									<Button variant="primary">Use</Button>
+									<Button variant="link ml-1">Preview</Button>
+                </Card.Body>
+              </Card>
+              </CardDeck>
+            
+            </Col>
+            </Row>
           </Col>
         </Row>
       </div>

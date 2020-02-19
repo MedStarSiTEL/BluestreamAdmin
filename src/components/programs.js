@@ -32,37 +32,41 @@ export default class Programs extends Component {
             <thead>
               <tr>
                 <th scope="col">Program</th>
-                <th scope="col">Facilities</th>
+                <th scope="col">Sites</th>
                 <th scope="col">ID</th>
-                <th scope="col">Status</th>
+                
                 <th scope="col">URL</th>
                 <th scope="col">Contact</th>
+                <th scope="col">Status</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <th scope="row">NRH</th>
+                <td><a href="#">NRH</a></td>
                 <td>54</td>
                 <td>MedStar_NRH_01</td>
-                <td>Active</td>
+                
                 <td>"https://call-center-admin.medstar-test.com/"</td>
                 <td>Julia McSorley</td>
+                <td>Active</td>
               </tr>
               <tr>
-                <th scope="row">NRH</th>
-                <td>54</td>
+                <td><a href="#">MFM</a></td>
+                <td>1</td>
                 <td>MedStar_NRH_01</td>
-                <td>Active</td>
+                
                 <td>"https://call-center-admin.medstar-test.com/"</td>
                 <td>Julia McSorley</td>
+                <td>Active</td>
               </tr>
               <tr>
-                <th scope="row">NRH</th>
-                <td>54</td>
-                <td>MedStar_NRH_01</td>
-                <td>Active</td>
+                <td><a href="#">Interpreting Services</a></td>
+                <td>2</td>
+                <td>MedStar_CLI</td>
+                
                 <td>"https://call-center-admin.medstar-test.com/"</td>
                 <td>Julia McSorley</td>
+                <td>Active</td>
               </tr>
             </tbody>
           </table>

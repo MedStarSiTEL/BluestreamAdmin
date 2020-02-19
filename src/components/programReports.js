@@ -8,6 +8,7 @@ import Table from 'react-bootstrap/Table';
 import Dropdown from "react-bootstrap/Dropdown";
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Tooltip from 'react-bootstrap/Tooltip';
+import Badge from 'react-bootstrap/Badge';
 
 
 export default class ProgramReports extends Component {
@@ -136,7 +137,6 @@ export default class ProgramReports extends Component {
                       
                       <td>
                         <i className="text-secondary oi oi-video mr-2"></i>
-                        <i className="text-secondary oi oi-wrench mr-2"></i>
                       </td>
                       <td>1/27/2020 13:45</td>
                       <td>
@@ -155,7 +155,9 @@ export default class ProgramReports extends Component {
                         4<i className="text-warning small oi oi-star mr-2"></i>
                         3<i className="text-primary small oi oi-star mr-2"></i>
                       </td>
-                      <td><i className="text-secondary small oi oi-comment-square"></i></td>
+                      <td><i className="text-secondary small oi oi-comment-square"></i>
+                      <Badge variant="warning" className="ml-2">Test</Badge>
+                      </td>
                     </tr>
                     <tr>
                     <td>Prompt Care</td>

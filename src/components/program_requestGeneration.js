@@ -68,43 +68,7 @@ export default class ProgramRequestGeneration extends Component {
         {/* this is a component - subsection*/}
         <Row className="mb-4">
           <Col>
-            {/* this is a component - subsection header */}
-            <h4>Request Generation Template</h4>
-            <p className="text-secondary">description of subsection</p>
-            {/* this is a component - subsection content */}
-            <CardDeck>
-              <Card>
-								<Card.Body>
-                  <Card.Title>EM Bunker <Badge variant="secondary float-right">List</Badge></Card.Title>
-                  <Card.Text>
-                    Used for all EM bunker queue manager programs  
-                  </Card.Text>
-									<Button variant="primary">Use</Button>
-									<Button variant="link ml-1">Preview</Button>
-                </Card.Body>
-              </Card>
-              <Card>
-                <Card.Body>
-                  <Card.Title>Sports Medicine <Badge variant="secondary float-right">Ad hoc</Badge></Card.Title>
-                  <Card.Text>
-                    This card has supporting text below as a natural lead-in to
-                    additional content.{" "}
-                  </Card.Text>
-									<Button variant="primary">Use</Button>
-									<Button variant="link ml-1">Preview</Button>
-                </Card.Body>
-              </Card>
-              <Card>
-                <Card.Body>
-                  <Card.Title>Maternal Fetal Medicine <Badge variant="secondary float-right">Link</Badge></Card.Title>
-                  <Card.Text>
-                    This is a wider card with supporting text below as a natural
-                  </Card.Text>
-									<Button variant="primary">Use</Button>
-									<Button variant="link ml-1">Preview</Button>
-                </Card.Body>
-              </Card>
-            </CardDeck>
+           
           </Col>
         </Row>
 

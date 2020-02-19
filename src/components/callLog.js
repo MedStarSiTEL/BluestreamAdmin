@@ -10,6 +10,7 @@ import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Popover from 'react-bootstrap/Popover';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Tooltip from 'react-bootstrap/Tooltip';
+import Badge from 'react-bootstrap/Badge';
 
 const popover = (
   <Popover id="popover-basic">
@@ -41,8 +42,29 @@ export default class CallLog extends Component {
             <Row>
               <Col md={9} className="mb-3">
               <Dropdown style={{display: 'inline'}}>
+              <Dropdown.Toggle variant="primary" id="dropdown-type-availability">
+                Month to date
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item href="#/action-1">Month to date</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Last 30 days</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Last 60 days</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Last 90 days</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Custom Range</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+             
+              {/* <Form.Group className="ml-5"  style={{display: 'inline'}} controlId="idNumber">
+                <Form.Label>Start Time</Form.Label>
+                <Form.Control className="ml-1" style={{display: 'inline', width:'140px'}} type="input" />
+              </Form.Group>
+              <Form.Group className="ml-3"  style={{display: 'inline'}} controlId="idNumber">
+                  <Form.Label>End Time</Form.Label>
+                  <Form.Control className="ml-1" style={{display: 'inline', width:'140px'}} type="input" />
+              </Form.Group> */}
+              <Dropdown  className="ml-1" style={{display: 'inline'}}>
               <Dropdown.Toggle variant="outline-dark" id="dropdown-type-availability">
-                Program
+                All Programs
               </Dropdown.Toggle>
               <Dropdown.Menu>
                 <Dropdown.Item href="#/action-1">Prompt Care</Dropdown.Item>
@@ -51,7 +73,7 @@ export default class CallLog extends Component {
             </Dropdown>
             <Dropdown  className="ml-1" style={{display: 'inline'}}>
               <Dropdown.Toggle variant="outline-dark" id="dropdown-type-availability">
-                Expertise
+                All Expertise
               </Dropdown.Toggle>
               <Dropdown.Menu>
                 <Dropdown.Item href="#/action-1">Prompt Care</Dropdown.Item>
@@ -60,7 +82,7 @@ export default class CallLog extends Component {
             </Dropdown>
             <Dropdown  className="ml-1" style={{display: 'inline'}}>
               <Dropdown.Toggle variant="outline-dark" id="dropdown-type-availability">
-                Site
+                All Sites
               </Dropdown.Toggle>
               <Dropdown.Menu>
                 <Dropdown.Item href="#/action-1">Prompt Care</Dropdown.Item>
@@ -69,7 +91,7 @@ export default class CallLog extends Component {
             </Dropdown>
             <Dropdown  className="ml-1" style={{display: 'inline'}}>
               <Dropdown.Toggle variant="outline-dark" id="dropdown-type-availability">
-                Expert
+                All Experts
               </Dropdown.Toggle>
               <Dropdown.Menu>
                 <Dropdown.Item href="#/action-1">Prompt Care</Dropdown.Item>
@@ -78,25 +100,18 @@ export default class CallLog extends Component {
             </Dropdown>
             <Dropdown  className="ml-1" style={{display: 'inline'}}>
               <Dropdown.Toggle variant="outline-dark" id="dropdown-type-availability">
-                Type
+                All Types
               </Dropdown.Toggle>
               <Dropdown.Menu>
                 <Dropdown.Item href="#/action-1">Video</Dropdown.Item>
                 <Dropdown.Item href="#/action-2">Audio</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
-            <Form.Group className="ml-5"  style={{display: 'inline'}} controlId="idNumber">
-                <Form.Label>Start Time</Form.Label>
-                <Form.Control className="ml-1" style={{display: 'inline', width:'140px'}} type="input" />
-            </Form.Group>
-            <Form.Group className="ml-3"  style={{display: 'inline'}} controlId="idNumber">
-                <Form.Label>End Time</Form.Label>
-                <Form.Control className="ml-1" style={{display: 'inline', width:'140px'}} type="input" />
-            </Form.Group>
+           
               </Col>
               <Col md={3} className="mb-3 text-right">
                 <Button variant="primary"><i className="oi oi-data-transfer-download mr-2"></i>Export</Button>
-                <Button className="ml-2" variant="secondary"><i className="oi oi-cog"></i></Button>
+                <Button className="ml-2" variant="outline-primary"><i className="oi oi-cog"></i></Button>
               </Col>
             </Row>
             <Row>
@@ -130,10 +145,10 @@ export default class CallLog extends Component {
                       </td>
                       <td>
                       <OverlayTrigger
-    placement="top"
-    delay={{ show: 250, hide: 400 }}
-    overlay={<Tooltip>Wait: 70s, Call: 60s</Tooltip>}
-  ><span>
+                        placement="top"
+                        delay={{ show: 250, hide: 400 }}
+                        overlay={<Tooltip>Wait: 70s, Call: 60s</Tooltip>}
+                      ><span>
                         <div className="line line-8 bg-warning"></div>
                         <div className="line line-3 bg-secondary"></div>
                         <div className="line line-6 bg-success"></div>
@@ -141,17 +156,36 @@ export default class CallLog extends Component {
                         </OverlayTrigger>
                       </td>
                       <td>
-                        5<i className="text-warning small oi oi-star mr-2"></i>
+                      
+                        5<OverlayTrigger
+                        placement="top"
+                        delay={{ show: 250, hide: 400 }}
+                        overlay={<Tooltip>Wait Time</Tooltip>}
+                      ><i className="text-warning small oi oi-star mr-2"></i></OverlayTrigger>
                         4
-                        <i className="text-primary small oi oi-star mr-2"></i>
+                        <OverlayTrigger
+                        placement="top"
+                        delay={{ show: 250, hide: 400 }}
+                        overlay={<Tooltip>Media</Tooltip>}
+                        >
+                        <i className="text-primary small oi oi-star mr-2"></i></OverlayTrigger>
                         3
-                        <i className="text-grey small oi oi-star"></i>
+                        <OverlayTrigger
+                        placement="top"
+                        delay={{ show: 250, hide: 400 }}
+                        overlay={<Tooltip>Expert</Tooltip>}
+                      >
+                        <i className="text-grey small oi oi-star"></i></OverlayTrigger>
                       </td>
                       <td>
-                        4<i className="text-warning small oi oi-star mr-2"></i>
+                        4<OverlayTrigger
+                        placement="top"
+                        delay={{ show: 250, hide: 400 }}
+                        overlay={<Tooltip>Expert</Tooltip>}
+                      ><i className="text-warning small oi oi-star mr-2"></i></OverlayTrigger>
                         3<i className="text-primary small oi oi-star mr-2"></i>
                       </td>
-                      <td><OverlayTrigger trigger="click" placement="left" overlay={popover}>
+                      <td><OverlayTrigger trigger="click" placement="left" overlay={popover} rootClose>
                         <i className="text-primary oi oi-magnifying-glass mr-2"></i>
                       </OverlayTrigger></td>
                     </tr>
@@ -163,7 +197,6 @@ export default class CallLog extends Component {
                       
                       <td>
                         <i className="text-secondary oi oi-video mr-2"></i>
-                        <i className="text-secondary oi oi-wrench mr-2"></i>
                       </td>
                       <td>1/27/2020 13:45</td>
                       <td>
@@ -185,7 +218,12 @@ export default class CallLog extends Component {
                         4<i className="text-warning small oi oi-star mr-2"></i>
                         3<i className="text-primary small oi oi-star mr-2"></i>
                       </td>
-                      <td><i className="text-secondary small oi oi-comment-square"></i></td>
+                      <td>
+                      <OverlayTrigger trigger="click" placement="left" overlay={popover} rootClose>
+                        <i className="text-primary oi oi-magnifying-glass mr-2"></i>
+                      </OverlayTrigger>
+                      <i className="text-secondary small oi oi-comment-square mr-2"></i>
+                      <Badge variant="warning">Test</Badge></td>
                     </tr>
                     <tr>
                     <td>Prompt Care</td>
@@ -193,7 +231,7 @@ export default class CallLog extends Component {
                       <td>MWHC</td>
                       <td>Dave Bauer</td>
                       <td>
-                        <i className="text-secondary oi oi-microphone mr-2"></i>
+                        <i className="text-secondary oi oi-phone mr-2"></i>
                       </td>
                       <td>1/26/2020 23:37</td>
                       <td>
